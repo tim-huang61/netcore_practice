@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Demo06_ConfigurationCommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "CommandKey1=value1 --CommandKey2=value2 -k1=k3",
+      "environmentVariables": {
+      }
+    }
+  }
+}
