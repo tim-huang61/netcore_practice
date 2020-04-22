@@ -29,6 +29,15 @@ namespace Demo14_LoggingSimple
             // logger.LogDebug("alogger debug");
             // logger.LogInformation("alogger information");
 
+            // IncludeScopes : 幫log建立識別的編號
+            var logger = serviceProvider.GetService<ILogger<Program>>();
+            using (logger.BeginScope($"ScopeId:{Guid.NewGuid()}"))
+            {
+                logger.LogInformation("Log1");
+                logger.LogDebug("Log2");
+                logger.LogError("Log3");
+            }
+
             var orderService = serviceProvider.GetService<IOrderService>();
 
             Console.Read();
