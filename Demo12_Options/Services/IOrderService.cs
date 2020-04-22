@@ -1,4 +1,4 @@
-namespace Demo12_Options.Controllers.Services
+namespace Demo12_Options.Services
 {
     public interface IOrderService
     {

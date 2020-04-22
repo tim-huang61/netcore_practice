@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Demo12_Options.Controllers.Services;
 using Demo12_Options.Models;
+using Demo12_Options.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,8 +28,13 @@ namespace Demo12_Options
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IOrderService, OrderService>();
+            services.AddSingleton<IOrderService, OrderService>();
             services.Configure<OrderServiceOption>(Configuration);
+            // 透過PostConfigure可動態調整配置的值
+            services.PostConfigure<OrderServiceOption>(options =>
+            {
+                options.MaxCount += 100;
+            });
             // services.AddScoped<OrderServiceOption>();
         }
 
