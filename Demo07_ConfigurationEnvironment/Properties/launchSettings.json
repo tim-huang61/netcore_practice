@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Demo07_ConfigurationEnvironment": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "key1": "value1",
+        "key2": "value2",
+        "section1__key3": "value3",
+        "tim_key1": "tim_key1"
+      }
+    }
+  }
+}
