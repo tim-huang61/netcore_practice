@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo06_ConfigurationCommand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo07_ConfigurationEnvironment", "Demo07_ConfigurationEnvironment\Demo07_ConfigurationEnvironment.csproj", "{32AC49AB-907C-47F8-8CDF-E3C6F9160217}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo08_JsonConfiguration", "Demo08_JsonConfiguration\Demo08_JsonConfiguration.csproj", "{793A3971-24AD-4FF5-833F-5E839077606D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{32AC49AB-907C-47F8-8CDF-E3C6F9160217}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32AC49AB-907C-47F8-8CDF-E3C6F9160217}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32AC49AB-907C-47F8-8CDF-E3C6F9160217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793A3971-24AD-4FF5-833F-5E839077606D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793A3971-24AD-4FF5-833F-5E839077606D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793A3971-24AD-4FF5-833F-5E839077606D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793A3971-24AD-4FF5-833F-5E839077606D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{42AFC9C5-AB6C-4DB7-94E3-C65677E7AE2B} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
@@ -61,5 +67,6 @@ Global
 		{4E9C6731-99B5-4BCA-9664-C955B4891BF3} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 		{FCF2C1CE-B799-4240-9F1F-41352002832F} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 		{32AC49AB-907C-47F8-8CDF-E3C6F9160217} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
+		{793A3971-24AD-4FF5-833F-5E839077606D} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 	EndGlobalSection
 EndGlobal
