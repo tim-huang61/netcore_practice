@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo08_JsonConfiguration", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo09_ConfigurationChangeToken", "Demo09_ConfigurationChangeToken\Demo09_ConfigurationChangeToken.csproj", "{59F3F15C-A6CE-48DE-9A00-D6BC5DA95E5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo10_Configuration_ModelBind", "Demo10_Configuration_ModelBind\Demo10_Configuration_ModelBind.csproj", "{B2E1C18A-948B-447A-9C28-2A6FF4F6D483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{59F3F15C-A6CE-48DE-9A00-D6BC5DA95E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F3F15C-A6CE-48DE-9A00-D6BC5DA95E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F3F15C-A6CE-48DE-9A00-D6BC5DA95E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E1C18A-948B-447A-9C28-2A6FF4F6D483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E1C18A-948B-447A-9C28-2A6FF4F6D483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E1C18A-948B-447A-9C28-2A6FF4F6D483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E1C18A-948B-447A-9C28-2A6FF4F6D483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{42AFC9C5-AB6C-4DB7-94E3-C65677E7AE2B} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
@@ -75,5 +81,6 @@ Global
 		{32AC49AB-907C-47F8-8CDF-E3C6F9160217} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 		{793A3971-24AD-4FF5-833F-5E839077606D} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 		{59F3F15C-A6CE-48DE-9A00-D6BC5DA95E5B} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
+		{B2E1C18A-948B-447A-9C28-2A6FF4F6D483} = {E5112382-3BF8-4205-9602-E131EB0C4FEB}
 	EndGlobalSection
 EndGlobal
