@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Demo12_Options.Models;
-using Demo12_Options.Services;
+using Demo13_ValidateOptions.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,8 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
-namespace Demo12_Options
+namespace Demo13_ValidateOptions
 {
     public class Startup
     {
@@ -28,11 +28,13 @@ namespace Demo12_Options
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IOrderService, OrderService>();
-            services.Configure<OrderServiceOption>(Configuration);
-            // 透過PostConfigure可動態調整配置的值
-            services.PostConfigure<OrderServiceOption>(options => { options.MaxCount += 100; });
-            // services.AddScoped<OrderServiceOption>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddOptions<OrderServiceOption>()
+                .Bind(Configuration)
+                .Services.AddSingleton<IValidateOptions<OrderServiceOption>, OrderServiceOptionValidator>();
+                // .Validate(
+                // options => options.MaxCount > 5000,
+                // "have to be over 5000");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,5 +53,23 @@ namespace Demo12_Options
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
+    }
+
+    public class OrderServiceOptionValidator : IValidateOptions<OrderServiceOption>
+    {
+        public ValidateOptionsResult Validate(string name, OrderServiceOption options)
+        {
+            if (options.MaxCount > 4000)
+            {
+                return ValidateOptionsResult.Success;
+            }
+
+            return ValidateOptionsResult.Fail("have to be over 4000");
+        }
+    }
+
+    public class OrderServiceOption
+    {
+        public int MaxCount { get; set; }
     }
 }
